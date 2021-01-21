@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav{
+    margin-top: 30px;
+    background:#ed3737;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: black 0px 0px 10px;
+}
+nav>ul{
+    display: flex;
+    font-weight: 600;
+}
+nav>ul>li{
+    list-style: none;
+}
+nav>ul>li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+nav>ul>li  a:hover{
+    background-color: green; 
+}
+header{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    height: 120vh;
+    justify-content: center;
+    align-content: center;
+}
+header>img{
+width: 100vw;
+position: absolute;
+top: 0px;
+z-index: -10;
+opacity: 0.5;
+}
+
+header>h1, h2{
+    color: white;
+    text-shadow: black 0px 0px 4px;
+}
+header>h1{
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+header>h2{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+#headerFlexWrap{
+    
+    margin-top: 80px;
+    display: flex;
+    padding: 0 15vw;
+    
+}
+.testimonialWrap{
+    height: 200px;
+    width: 150px;
+    background: white;
+    opacity: 0.9;
+    margin: auto;
+    padding:0 10px;
+    display: flex;
+    flex-direction: column;
+}
+#imgPlaceholder{
+    background: #303030;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+.testimonialWrap>h3,p{
+  
+    flex: 1;
+}
+.testimonialWrap>h3{
+
+}
+.testimonialWrap>p{
+    font-size: 12px;
+}
+.testimonialWrap>small{
+    flex: 1;
+}
