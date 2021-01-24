@@ -12,20 +12,24 @@
 </head>
 <body>
     
-    <nav>
-        <div id="navImgWrap">
-            <img src="assets/loginIcon.png" alt="login">
-            <img src="assets/cart.png" alt="order">
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Find Us</a></li>
-        </ul>
-    </nav>
+
     <header>
+        <nav>
+            <div id="navImgWrap">
+                <img src="assets/loginIcon.png" alt="login">
+                <p>Login</p>
+                <img src="assets/cart.png" alt="order">
+                <p>Orders</p>
+            </div>
+            <div id="blankFlex"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FindUs</a></li>
+            </ul>
+        </nav>
         <img id="headerImg" src="assets/pizzaheader.jfif" alt="headerImg pizza">
      
             <h1>BELLO ITALIANO</h1>
@@ -67,9 +71,53 @@
             <hr>
         </section>
         <section>
-           
+           <div class="galleryWrap">
+                <div class="imgWrapper">
+                    <img id="lastClone "src="assets/galImg4.jpg" alt="promotion">
+                    <img  src="assets/galImg1.jpg" alt="promotion">
+                    <img src="assets/galImg2.jpg" alt="promotion">
+                    <img src="assets/galImg3.jpg" alt="promotion">
+                    <img src="assets/galImg4.jpg" alt="promotion">
+                    <img id="firstClone "src="assets/galImg1.jpg" alt="promotion">
+                </div>
+                <button id="prevBtn">Prev</button>
+                <button id="nextBtn">Next</button>
+           </div>
         </section>
     </main>
     <footer></footer>
+    <script>
+        const imgSlide = document.querySelector(".imgWrapper");
+        const galleryImgs = document.querySelectorAll(".imgWrapper img");
+
+        const prev = document.querySelector("#prevBtn");
+        const next = document.querySelector("#nextBtn");
+
+
+        let counter = 1;
+        const size = galleryImgs[0].clientWidth;
+
+        imgSlide.style.transform = 'translateX('+(-size * counter) + 'px';
+
+        nextBtn.addEventListener('click',()=>{
+            imgSlide.style.transition = "transform 0.4s ease-in-out ";
+            counter++;
+            imgSlide.style.transform = 'translateX('+(-size * counter) + 'px';
+        });
+        prevBtn.addEventListener('click',()=>{
+            imgSlide.style.transition = "transform 0.4s ease-in-out ";
+            counter--;
+            imgSlide.style.transform = 'translateX('+(-size * counter) + 'px';
+        });
+        imgSlide.addEventListener('transitionend',()=>{
+            console.log(galleryImgs[counter]);
+            if (galleryImgs[counter].id === 'lastClone'){
+                imgSlide.style.transition = 'none';
+                counter = galleryImgs.length -2;
+                imgSlide.style.transform = 'translateX('+(-size * counter) + 'px';
+            }
+        });
+
+    </script>
 </body>
 </html>

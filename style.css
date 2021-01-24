@@ -10,21 +10,34 @@ body{
 
 nav{
     margin-top: 30px;
+    margin-bottom: 50px;
     background:#b32020;
     display: flex;
     justify-content: flex-end;
     box-shadow: black 0px 0px 10px;
 }
+#blankFlex{
+    flex:0.5;
+}
 nav>#navImgWrap{
-    margin: auto 0;
-    border: solid 2px green;
+    flex: 0.8;
+    margin: auto;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
 }
 #navImgWrap>img{
+    padding: 0 20px;
     height: 40px;
     filter: invert();
 }
 nav>ul{
     display: flex;
+    flex: 1;
     font-weight: 600;
 }
 nav>ul>li{
@@ -43,9 +56,12 @@ nav>ul>li  a:hover{
 header{
     display: flex;
     flex-direction: column;
-
+    background-image: url("assets/pizzaheader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
-    height: 80vh;
+    
     justify-content: center;
     align-content: center;
 }
@@ -96,6 +112,7 @@ header>small{
     color: white;
     position:relative;
     bottom: 40px;
+    margin-bottom: 50px;
 }
 
 
@@ -194,3 +211,23 @@ header>small{
     color: #b32020;
 }
 
+
+
+
+
+.galleryWrap{
+    
+    border: solid 2px red;
+}
+.imgWrapper{
+    margin: auto;
+    border: solid 2px blue;
+    width: 640px;
+    display: flex;
+}
+.imgWrapper>img{
+
+    width: 640px;
+    height: 400px;
+    border: solid 2px green;
+}
