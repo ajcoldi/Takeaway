@@ -371,112 +371,92 @@ header>small{
     padding: 20px 0;
     
 }
-.slider{
-    width: 600px;
-    height: 375px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .slides{
-    width: 500%;
-    height: 375px;
-    display: flex;
-  }
-  
-  .slides input{
-    display: none;
-  }
-  
-  .slide{
-    width: 20%;
-    transition: 2s;
-  }
-  
-  .slide img{
-    width: 600px;
-    height: 375px;
-  }
-  
-  /*css for manual slide navigation*/
-  
-  .navigation-manual{
-    position: absolute;
-    width: 600px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .manual-btn{
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-  
-  .manual-btn:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  .manual-btn:hover{
-    background: #303030;
-  }
-  
-  #radio1:checked ~ .first{
-    margin-left: 0;
-  }
-  
-  #radio2:checked ~ .first{
-    margin-left: -20%;
-  }
-  
-  #radio3:checked ~ .first{
-    margin-left: -40%;
-  }
-  
-  #radio4:checked ~ .first{
-    margin-left: -60%;
-  }
-  
-  /*css for automatic navigation*/
-  
-  .navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 600px;
-    justify-content: center;
-    margin-top: 335px;
-  }
-  
-  .navigation-auto div{
-    border: 2px solid #303030;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #303030;
-  }
-  
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #303030;
-  }
-  
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #303030;
-  }
-  
-  #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #303030;
-  }
+
 footer{
-    height: 20vh;
+    display: flex;
+    align-items: center;
     background: black;
+    color:white;
+    text-align: center;
+}
+footer>div{
+    
+flex: 1;
+}
+footer>div>h3{
+    font-size: 12px;
+    align-items: center;
+    text-align: center;
+}
+footer>p{
+    flex: 1;
+}
+footer>p>a{
+    color: #55ab3f;
+}
+footer>ul{
+    flex: 1;
+}
+footer>ul>li{
+    list-style:none;
+}
+footer>ul>li>a{
+    color: #55ab3f;
+    text-decoration: none;
+}
+
+
+
+
+#sectionAccordian{
+    background: whitesmoke;
+
+    padding-top: 0 40px;
+}
+#sectionAccordian>h2{
+    padding: 40px 0;
+    text-align: center;
+    color: grey;
+    font-size: 60px;
+    text-shadow: none;
+}
+#sectionAccordian>p{
+    width: 50%;
+    margin: auto;
+ 
+    text-align: center;
+    text-shadow: none;
+}
+#accordion{
+    padding: 40px;
+    width: 60%;
+    margin: auto;
+    height: auto;
+}
+#accordion>h3{
+    box-shadow: 0px 0px 4px lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 4px;
+    background: white;
+}
+#accordion>div{
+    
+    border-radius: 5px;
+    border: solid 2px whitesmoke;
+    background: white;
+    height: auto;
+    
+}
+.sectionItem{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px lightgray;
+    padding:10px 20px ;
+}
+.ItemDescript{
+    flex: 10;
+}
+.itemAdd{
+    flex: 1;
 }
